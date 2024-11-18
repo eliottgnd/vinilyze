@@ -1,0 +1,73 @@
+/* Reset des styles précédents */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.vinyl-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.vinyl-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  margin: 0 -1rem;
+}
+
+.vinyl-card {
+  flex: 0 0 300px;
+  height: 400px;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: rotate(-5deg);
+  transition: all 0.3s ease;
+}
+
+.vinyl-card:hover {
+  transform: rotate(0) scale(1.02);
+}
+
+.vinyl-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #8B5CF6;
+  border-color: #8B5CF6;
+}
+
+@media (max-width: 768px) {
+  .vinyl-cards-wrapper {
+    padding: 0.5rem;
+  }
+  
+  .vinyl-card {
+    flex: 0 0 280px;
+  }
+} 
